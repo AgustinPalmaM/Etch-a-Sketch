@@ -1,3 +1,41 @@
 body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    box-shadow: black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border: solid black 1px;
+}
+
+.small-divs {
     background-color: aqua;
+    height: 16px;
+    width: 16px;
+}
+.small-divs-two {
+    background-color: rgb(204, 0, 255);
+    height: 16px;
+    width: 16px;
+}
+
+
+
+.background-green {
+    background-color: chartreuse;
+}
+
+.background-white {
+    background-color: white;
 }
