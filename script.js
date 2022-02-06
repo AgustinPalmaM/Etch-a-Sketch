@@ -3,10 +3,12 @@ const buttonColor =  document.querySelector('#muestrario')
 const buttonBorrarTodo = document.querySelector('#boton-borrar-todo')
 const buttonBorrar = document.querySelector('#boton-borrar')
 const buttonColorear = document.querySelector('#colorear')
+const buttonColorearMix = document.querySelector('#boton-arcoiris')
 const buttonEightSquares = document.querySelector('#eight')
 const buttonSixteenSquares = document.querySelector('#sixteen')
 const buttonThirtyTwoSquares = document.querySelector('#thirtyTwo')
 const buttonSixtyFourSquares = document.querySelector('#sixtyFour')
+// const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
 
 function agregarDivs(numSquares) {
     let size = (mainContainer.clientWidth) / numSquares;
@@ -56,6 +58,20 @@ function colorear() {
 
 buttonColorear.addEventListener('click', colorear)
 
+function colorearMix() {
+    mainContainer.childNodes.forEach((e) => {
+        e.addEventListener('mouseenter', function () {
+            e.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+
+        })
+    })    
+}
+
+buttonColorearMix.addEventListener('click', colorearMix)   
+
+
+
+
 function borrador() {
     mainContainer.childNodes.forEach((d) => {
         d.addEventListener('mouseenter', () => {
@@ -73,20 +89,7 @@ buttonBorrarTodo.addEventListener('click', borrarTodo)
 
 
 
-// buttonEightSquares.addEventListener('click', agregarDivs(8))
-// buttonEightSquares.addEventListener('click', agregarDivs(16))
 
-
-// const pruebaParent = document.querySelector("#prueba-parent")
-// const pruebaHijo = document.querySelector('#prueba-hijo')
-// pruebaParent.childNodes.forEach((x) => {
-//     if (x.nodeName === 'DIV') {
-//         x.style.cssText = 'background-color: black; height: 0px; width: 0px'
-//     }
-    
-// })
-
-// console.log(pruebaParent.childNodes);
 
 
 

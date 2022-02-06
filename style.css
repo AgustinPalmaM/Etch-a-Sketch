@@ -1,8 +1,30 @@
 body {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
     height: 100vh;
+    gap: 50px;
+}
+
+img {
+  height: 100px;
+  width: 200px;
+}
+
+#first-square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+#selectores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-self: left;
 }
 
 #main-container {
@@ -17,6 +39,8 @@ body {
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     border: solid black 1px;
+    padding-right: 0;
+    justify-self: right;
 }
 
 .small-divs {
@@ -116,7 +140,7 @@ body {
 }
 
 .button-group .button{
-  font-size: 13px; /* Set the font size, different from inherited 0 */
+  font-size: 26px; /* Set the font size, different from inherited 0 */
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
